@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
     <title>Document</title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <nav>
         <div></div>
@@ -20,23 +26,51 @@
             <a href=""><img src="./img/icon-fb.png" alt="fb"></a>
             <a href=""><img src="./img/icon-ig.png" alt="ig"></a>
             <a href=""><img src="./img/icon-github.png" alt="github"></a>
-            
+
         </div>
     </nav>
 
     <div id="banner">
         <div class="banner1">
-            <h1>標題一</h1>
-            <h2>標題二</h2>
+            <h1>網頁設計</h1>
+            <h2>客製化切版!</h2>
         </div>
         <div class="banner2">
-            <h1>標題一</h1>
-            <h2>標題二</h2>
+            <h1>響應式網頁</h1>
+            <h2>隨時隨地都可瀏覽網頁。</h2>
         </div>
         <div class="banner3">
-            <h1>標題一</h1>
-            <h2>標題二</h2>
+            <h1>平面設計</h1>
+            <h2>讓平面設計結合網頁設計。</h2>
         </div>
     </div>
+
+    <!-- 最新消息 -->
+    <section>
+        <h1>標題一</h1>
+        <div id="news">
+            <div>
+                <img src="./img/new1.jpg" alt="new1">
+                <h3>標題三</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, temporibus.</p>
+            </div>
+            <div>
+                <img src="./img/new2.jpg" alt="new2">
+                <h3>標題三</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, temporibus.</p>
+            </div>
+            <div>
+                <img src="./img/new3.jpg" alt="new3">
+                <h3>標題三</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, temporibus.</p>
+            </div>
+        </div>
+    </section>
+    <!-- jq要在第一個 slick第二 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="./main.js"></script>
 </body>
+
 </html>
