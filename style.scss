@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Gorditas&family=Lobster&family=Pacifico&display=swap');
+$color-bg:rgb(212, 209, 209);
+$color-text:rgb(17, 17, 17);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    text-align: center;
+    background: $color-bg;
+    padding: 20px 0;
+    #link{
+        
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: $color-text;
+            padding: 30px;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.5);
+            }
+            
+        }
+    }
+    #social{
+        padding: 20px 0;
+        a{
+            
+            transition: 0.5s;
+            padding: 0 10px;
+            &:hover {
+                filter: invert(54%) sepia(21%) saturate(4758%) hue-rotate(0deg) brightness(102%) contrast(103%);
+            }
+        }
+    }
+    .logo {
+        font-size: 40px !important;
+        font-family: 'Lobster', cursive;
+        transition: 0.5s;
+        &:hover {
+           transform: scale(2);
+        }
+    }
+
+}
+
+// 使用變數要用這樣 #{$i}
+@for $i from 1 through 3 {
+    .banner#{$i} {
+        background-image: url(./img/city#{$i}.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        text-align: center;
+        h1{
+            font-size: 50px;
+            padding: 300px 0 100px;
+            color:$color-text;
+            text-shadow: black 0 0  0.1px;
+
+        }
+    }
+}
