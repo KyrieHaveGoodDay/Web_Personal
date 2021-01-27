@@ -41,13 +41,15 @@ nav {
             }
         }
     }
-    .logo {
-        font-size: 40px !important;
-        font-family: "Lobster", cursive;
-        transition: 0.5s;
-        &:hover {
-            transform: scale(2);
-        }
+   
+}
+.logo {
+    font-size: 40px !important;
+    font-family: "Lobster", cursive;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        transform: scale(2);
     }
 }
 
@@ -178,5 +180,19 @@ form {
         border: 1px solid $color-black;
         background: white;
         color: $color-black;
+    }
+}
+
+footer{
+    background-color:$color-bg;
+    padding: 50px;
+    text-align: center;
+    #ft-logo{
+        display: block;
+        margin-bottom: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
     }
 }
