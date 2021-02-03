@@ -5,6 +5,10 @@ $color-bg: rgb(250, 249, 249);
 $color-text: rgb(17, 17, 17);
 $color-white: #f8f8f8;
 $color-black: #252525;
+$text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+$desktop: 1025px;
+$middle: 1024px;
+$phone: 767px;
 
 * {
     margin: 0;
@@ -13,13 +17,35 @@ $color-black: #252525;
     font-family: 微軟正黑體;
 }
 
+#menu {
+    background-image: url(./img/menu.png);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: $middle) {
+        margin: 0 10px 0 auto;
+        display: block;
+    }
+    @media screen and (max-width: $phone) {
+        margin: 0 20px 0 auto;
+        display: block;
+    }
+}
+
 nav {
     display: grid;
     grid-template-columns: 15% auto 15%;
     text-align: center;
     background: $color-bg;
     padding: 20px 0;
+    @media screen and (max-width: $middle) {
+        grid-template-columns: 100% 0;
+    }
     #link {
+        @media screen and (max-width: $middle) {
+            display: none;
+        }
         a {
             display: inline-block;
             text-decoration: none;
@@ -33,6 +59,9 @@ nav {
     }
     #social {
         padding: 45px 0;
+        @media screen and (max-width: $middle) {
+            display: none;
+        }
         a {
             transition: 0.5s;
             padding: 0 10px;
@@ -41,7 +70,6 @@ nav {
             }
         }
     }
-   
 }
 .logo {
     font-size: 40px !important;
@@ -88,11 +116,19 @@ nav {
                 text-shadow: black 0 0 0.1px;
                 font-family: "Gorditas", cursive;
                 color: white;
+                @media screen and (max-width: $phone) {
+                    padding: 200px 0 90px;
+                    font-size: 50px;
+                }
             }
             h2 {
                 font-size: 45px;
                 font-family: "Gorditas", cursive;
                 color: white;
+                @media screen and (max-width: $phone) {
+                    font-size: 20px;
+                    font-weight: 10px;
+                }
             }
         }
     }
@@ -100,31 +136,96 @@ nav {
 
 section {
     margin-bottom: 10px;
-    
+
     #news {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         text-align: center;
+        @media screen and (max-width: $middle) {
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: $phone) {
+            grid-gap: 20px;
+            grid-template-columns: 1fr;
+            text-align: center;
+            
+        }
         img {
             width: 600px;
             height: 350px;
+            @media screen and (max-width: $middle) {
+                width: 400px;
+                height: 250px;
+            }
         }
-        h3{
+        h3 {
             font-size: 30px;
         }
-        p{
+        p {
             font-size: 18px;
         }
     }
 }
+// 作品
+// 最新作品
+#works {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 100px 0;
+    overflow: hidden;
+    @media screen and (max-width: $middle) {
+        width: 100%;
+    }
+
+    .work-card {
+        text-align: center;
+
+        &:focus {
+            outline: none;
+        }
+
+        img {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            transition: 0.6s;
+            box-shadow: $text-shadow; 
+
+            &:hover {
+                border-radius: 20px;
+            }
+        }
+
+        h2 {
+            padding: 20px 0;
+        }
+
+        small {
+            color: black;
+        }
+    }
+}
+
 
 // form
 form {
     width: 1280px;
     margin: 0 auto;
     padding: 20px 0 100px;
+    @media screen and (max-width: $middle) {
+        width: 100%;
+        padding: 20px 20px 100px;
+    }
 
     input {
+        @media screen and (max-width: $middle) {
+            width: 100%;
+           
+        }
         width: 49%;
         padding: 10px;
 
@@ -136,7 +237,7 @@ form {
     }
 
     // 利用屬性選取器，語法：元素[屬性=值]
-    input[type=email] {
+    input[type="email"] {
         float: right;
     }
 
@@ -159,6 +260,9 @@ form {
     padding: 30px 0 20px;
     font-size: 30px;
     font-weight: 900;
+    @media screen and (max-width: $middle) {
+        font-size: 50px;
+    }
 }
 
 // 統一樣式
@@ -183,15 +287,15 @@ form {
     }
 }
 
-footer{
-    background-color:$color-bg;
+footer {
+    background-color: $color-bg;
     padding: 50px;
     text-align: center;
-    #ft-logo{
+    #ft-logo {
         display: block;
         margin-bottom: 50px;
     }
-    a{
+    a {
         text-decoration: none;
         color: black;
     }

@@ -10,6 +10,28 @@
   font-family: 微軟正黑體;
 }
 
+#menu {
+  background-image: url(./img/menu.png);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #menu {
+    margin: 0 10px 0 auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #menu {
+    margin: 0 20px 0 auto;
+    display: block;
+  }
+}
+
 nav {
   display: -ms-grid;
   display: grid;
@@ -18,6 +40,19 @@ nav {
   text-align: center;
   background: #faf9f9;
   padding: 20px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    -ms-grid-columns: 100% 0;
+        grid-template-columns: 100% 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #link {
+    display: none;
+  }
 }
 
 nav #link a {
@@ -36,6 +71,12 @@ nav #link a:hover {
 
 nav #social {
   padding: 45px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  nav #social {
+    display: none;
+  }
 }
 
 nav #social a {
@@ -98,10 +139,24 @@ nav #social a:hover {
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  #banner .banner1 h1 {
+    padding: 200px 0 90px;
+    font-size: 50px;
+  }
+}
+
 #banner .banner1 h2 {
   font-size: 45px;
   font-family: "Gorditas", cursive;
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  #banner .banner1 h2 {
+    font-size: 20px;
+    font-weight: 10px;
+  }
 }
 
 #banner .banner2 {
@@ -125,10 +180,24 @@ nav #social a:hover {
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  #banner .banner2 h1 {
+    padding: 200px 0 90px;
+    font-size: 50px;
+  }
+}
+
 #banner .banner2 h2 {
   font-size: 45px;
   font-family: "Gorditas", cursive;
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  #banner .banner2 h2 {
+    font-size: 20px;
+    font-weight: 10px;
+  }
 }
 
 #banner .banner3 {
@@ -152,10 +221,24 @@ nav #social a:hover {
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  #banner .banner3 h1 {
+    padding: 200px 0 90px;
+    font-size: 50px;
+  }
+}
+
 #banner .banner3 h2 {
   font-size: 45px;
   font-family: "Gorditas", cursive;
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  #banner .banner3 h2 {
+    font-size: 20px;
+    font-weight: 10px;
+  }
 }
 
 section {
@@ -170,9 +253,33 @@ section #news {
   text-align: center;
 }
 
+@media screen and (max-width: 1024px) {
+  section #news {
+    grid-gap: 20px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section #news {
+    grid-gap: 20px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
 section #news img {
   width: 600px;
   height: 350px;
+}
+
+@media screen and (max-width: 1024px) {
+  section #news img {
+    width: 400px;
+    height: 250px;
+  }
 }
 
 section #news h3 {
@@ -183,15 +290,75 @@ section #news p {
   font-size: 18px;
 }
 
+#works {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  #works {
+    width: 100%;
+  }
+}
+
+#works .work-card {
+  text-align: center;
+}
+
+#works .work-card:focus {
+  outline: none;
+}
+
+#works .work-card img {
+  width: 230px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+#works .work-card img:hover {
+  border-radius: 20px;
+}
+
+#works .work-card h2 {
+  padding: 20px 0;
+}
+
+#works .work-card small {
+  color: black;
+}
+
 form {
   width: 1280px;
   margin: 0 auto;
   padding: 20px 0 100px;
 }
 
+@media screen and (max-width: 1024px) {
+  form {
+    width: 100%;
+    padding: 20px 20px 100px;
+  }
+}
+
 form input {
   width: 49%;
   padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  form input {
+    width: 100%;
+  }
 }
 
 form input::-webkit-input-placeholder {
@@ -214,7 +381,7 @@ form input::placeholder {
   font-size: 14px;
 }
 
-form input[type=email] {
+form input[type="email"] {
   float: right;
 }
 
@@ -250,6 +417,12 @@ form textarea::placeholder {
   padding: 30px 0 20px;
   font-size: 30px;
   font-weight: 900;
+}
+
+@media screen and (max-width: 1024px) {
+  .title-big {
+    font-size: 50px;
+  }
 }
 
 .btn {
